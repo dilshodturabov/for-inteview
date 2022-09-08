@@ -14,7 +14,8 @@ const navbar = document.getElementById("nav");
 const topLink = document.querySelector(".top-link");
 const selectorBtn = document.getElementById("selector-container");
 const sections = document.querySelector(".sections");
-const selector = document.querySelector(".selector")
+const selector = document.querySelector("#selectors");
+
 
 navToggle.addEventListener("click", function() {
     const containerHeight = linksContainer.getBoundingClientRect().height;
@@ -26,7 +27,7 @@ navToggle.addEventListener("click", function() {
         linksContainer.style.height = 0;
     }
 })
-
+console.log(selector);
 // ********** fixed navbar ************
 window.addEventListener("scroll", function() {
     const scrollHeight = window.pageYOffset;
@@ -138,7 +139,7 @@ const valuesOfSelectors = [
 ];
 
 let btns = valuesOfSelectors.map((item)=>{
-    return `<a href="#${item.title}" class="scroll-link">
+    return `<a href="#${item.title}" id="selectors" class="scroll-link">
                 ${item.title}
             </a>`
 })

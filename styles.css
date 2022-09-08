@@ -127,6 +127,9 @@ p {
     margin-bottom: 1.25rem;
     color: var(--clr-grey-5);
 }
+.section{
+    padding-top: 250px;
+}
 
 .preloader {
   position: fixed;
@@ -141,8 +144,6 @@ p {
   visibility: visible;
   z-index: 999;
   transition: var(--transition);
-  width: 100% !important;
-  height: 100%;
 }
 .hide-preloader {
   z-index: -999;
@@ -190,6 +191,16 @@ p {
 
 .searchbar:focus-visible {
     outline: none;
+}
+
+@media(min-width: 300px) and (max-width: 799px){
+    .searchbar{
+        width: 90%;
+    }
+    .search-btn{
+        width: 10%;
+        font-size: 12px;
+    }
 }
 
 @media(min-width: 2000px) and(max-width: 4000px){
